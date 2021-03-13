@@ -1,0 +1,23 @@
+extends layoutPortal
+
+block content
+
+    main(role='main')
+
+      .jumbotron
+        h2 Selamat datang di Portal Dosen
+        p
+          | Portal berikut dapat menyetujui rencana study mahasiswa dan menambah data mahasiswa
+        h4 Profil
+        hr
+        .container
+          .row
+            .col-md-3
+              h3 ID
+              h3 Nama 
+              h3 Alamat
+            .col-md-6
+              h3 : #{dosen.idDosen}
+              h3 : #{dosen.namaDosen}
+              h3 : #{dosen.alamatDosen}
+      

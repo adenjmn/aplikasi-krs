@@ -1,0 +1,14 @@
+{
+  "name": "sistem-akademik",
+  "version": "1.0.0",
+  "description": "Aplikasi sistem akademik",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ade Nurjaman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

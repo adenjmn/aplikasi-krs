@@ -1,0 +1,25 @@
+extends layoutPortal
+
+block content
+
+    main(role='main')
+      .jumbotron
+        h1  Edit Data Mahasiswa
+        .container
+          .row
+            - rid = encodeURIComponent(data['@rid'])
+              form(action='/dosen/edit-mahasiswa/'+rid+'/edit' method='post')
+                p
+                  input(type='text' name='nim' placeholder='nim' value=data.nim)
+                p
+                  input(type='text' name='namaLengkap' placeholder='namaLengkap' value=data.namaLengkap)
+                p
+                  input(type='text' name='alamat' placeholder='alamat' value=data.alamat)
+                p
+                  input(type='text' name='tahunDiterima' placeholder='Tahun' value=data.tahunDiterima)
+                p
+                  input(type='text' name='jurusan' placeholder='jurusan' value=data.jurusan)
+                p
+                  input(type='text' name='fakultas' placeholder='fakultas' value=data.fakultas)
+                p
+                  input(type='submit')

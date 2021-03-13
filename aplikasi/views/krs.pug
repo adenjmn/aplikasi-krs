@@ -1,0 +1,55 @@
+extends layoutSimak
+
+block content
+
+    main(role='main')
+
+      .jumbotron
+        .container-fluid
+          h1.text-center Kartu Rencana Study
+          hr
+          if rencanaStudy
+            .row
+              .col-md-2
+                h2 Nama
+                h2 NIM
+              .col-md-4
+                h2 : #{rencanaStudy.nama}
+                h2 : #{rencanaStudy.nim}
+            hr
+            .row
+              .col-md-12
+                h3 Daftar Matkul yang di kontrak :
+                h3.matkul  #{rencanaStudy.matkul1}
+                h3.matkul  #{rencanaStudy.matkul2}
+                
+            .row
+              .col
+                hr
+                h3  Status Persetujuan
+                if rencanaStudy.status=='disetujui'
+                  h3.setujuKRS  #{rencanaStudy.status}
+                  p Jika ingin ada perubahan hubungi dosen akademik anda
+                else
+                  h3.tolakKRS  #{rencanaStudy.status}
+                  p Hubungi dosen akademik anda
+              
+          else
+            p
+              | Anda belum mengisi KRS
+            p
+              a.btn.btn-success.btn-md(href='/simak/rencanaStudy/isiKrs', role='button') Tambah Matkul +
+    
+    footer.container
+      p © Ade Nurjaman 2020
+
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"
+    )
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"
+      integrity="sha256-78rSZBnBJXmJ5VGuWL8mkunvhy94g99Rw53bssjHSUk="
+      crossorigin="anonymous"
+    )

@@ -1,0 +1,25 @@
+extends layoutPortal
+
+block content
+
+    main(role='main')
+      .jumbotron
+        h1  Tambah Data Mahasiswa
+        hr
+        .container.form
+          .row
+            form(action='/dosen/add-mahasiswa/create' method='post')
+              p
+                input(type='text' name='nim' placeholder='nim')
+              p
+                input(type='text' name='namaLengkap' placeholder='namaLengkap')
+              p
+                input(type='text' name='alamat' placeholder='alamat')
+              p
+                input(type='text' name='tahunDiterima' placeholder='tahunDiterima')
+              p
+                input(type='text' name='jurusan' placeholder='jurusan')
+              p
+                input(type='text' name='fakultas' placeholder='fakultas')
+              p
+                input(type='submit').btn-light.btn-sm

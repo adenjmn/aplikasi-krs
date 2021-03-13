@@ -1,0 +1,38 @@
+extends layoutPortal
+
+block content
+
+    main(role='main')
+      .jumbotron
+        .container
+          .row
+            h2 DAFTAR MAHASISWA UNIVERSITAS
+        ul
+          table.ui.celled.table.center.aligned
+            thead
+              tr
+                th NIM
+                th Nama
+                th Alamat
+                th Tahun Diterima
+                th Jurusan
+                th Fakultas
+                th Edit 
+                th Delete
+            tbody
+              each data in data_
+                - rid = encodeURIComponent(data['@rid'])
+                  tr
+                    td #{data.nim}
+                    td #{data.namaLengkap}
+                    td #{data.alamat}
+                    td #{data.tahunDiterima}
+                    td #{data.jurusan}
+                    td #{data.fakultas}
+                    td
+                      a.btn.btn-info.btn-sm(href='/dosen/edit-mahasiswa/'+rid+'/') edit
+                    td
+                      form(action='/dosen/delete-mahasiswa/'+rid+'/delete' method='post')
+                        input(type='submit' value='delete').btn-warning.btn-sm
+            
+          a.btn.btn-success.btn-md(href='/dosen/add-mahasiswa', role='button') Tambah Mahasiswa

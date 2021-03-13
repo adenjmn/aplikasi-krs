@@ -1,0 +1,44 @@
+extends layoutPortal
+
+block content
+
+    main(role='main')
+      .jumbotron
+        .container
+          .row
+            h2 DAFTAR MAHASISWA UNIVERSITAS
+        ul
+          table.ui.celled.table.center.aligned
+            thead
+              tr
+                th NIM
+                th Nama
+                th Status
+                th Daftar Matkul
+                th Setuju 
+                th Tolak
+                th Reset
+            tbody
+              each data in data_
+                - rid = encodeURIComponent(data['@rid'])
+                  tr
+                    td #{data.nim}
+                    td #{data.nama}
+                    td #{data.status}
+                    td
+                      li
+                        if data.matkul1
+                          p #{data.matkul1}
+                      li
+                        if data.matkul2
+                          p #{data.matkul2}
+                    td
+                      form(action='/dosen/persetujuan/'+rid+'/setuju' method='post')
+                        input(type='submit' value='Setuju').btn-success.btn-sm
+                    td
+                      form(action='/dosen/persetujuan/'+rid+'/tolak' method='post')
+                        input(type='submit' value='Tolak').btn-warning.btn-sm
+                    td
+                      form(action='/dosen/persetujuan/'+rid+'/reset-krs' method='post')
+                        input(type='submit' value='Reset').btn-danger.btn-sm
+                      

@@ -1,0 +1,85 @@
+/* W3hubs.com - Download Free Responsive Website Layout Templates designed on HTML5 CSS3,Bootstrap,Tailwind CSS which are 100% Mobile friendly. w3Hubs all Layouts are responsive cross browser supported, best quality world class designs. */
+
+body {
+  background-image: url('https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2020/04/15/1447146846.jpeg');
+  padding: 0;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#title{
+  background-color: #A52A2A;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+form {
+  background-color: rgba(60, 89, 107, 0.63);
+  width: 40%;
+  padding: 30px;
+}
+
+.nim input,
+.password input {
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  margin: 5px 5px 15px;
+  box-sizing: border-box;
+  padding: 15px 15px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  background: #63cdda;
+  color: #fff;
+  border: 0px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.checkbox {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+
+
+.label {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+}
+
+@media(max-width:610px) {
+  form {
+    width: 60%;
+  }
+
+  button {
+    padding: 5px;
+  }
+}
+
+@media(max-width:420px) {
+  form {
+    width: 70%;
+  }
+
+}

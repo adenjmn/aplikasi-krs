@@ -1,0 +1,41 @@
+extends layoutSimak
+
+block content
+
+    main(role='main')
+
+      .jumbotron
+        .container-fluid
+          h1.display-7 Page KRS
+          p
+            | Isi KRS anda
+        
+          form(action="/isikrs" method="POST")
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="sbd" aria-label="Checkbox for following text input" value="Sistem Basis Data"> Sistem Basis Data
+              </div>
+            </div>
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="psbd" aria-label="Checkbox for following text input" value="Praktikum Sistem Basis Data"> Praktikum Sistem Basis Data
+              </div>
+            </div>
+            button(type="submit") Submit
+          
+          p
+            
+      
+    footer.container
+      p © Ade Nurjaman 2020
+
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"
+    )
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"
+      integrity="sha256-78rSZBnBJXmJ5VGuWL8mkunvhy94g99Rw53bssjHSUk="
+      crossorigin="anonymous"
+    )

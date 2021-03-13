@@ -1,0 +1,105 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 10px;
+  background-color: #E85F51;
+}
+.navbar{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #A52A2A;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+}
+
+.navbar .navbar-brand {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: #C9B617;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar .nav-item .nav-link {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color:white;
+  margin-left: 50px;
+}
+.jumbotron{
+  background-color: white;
+}
+h1{
+  /*text-align: center;*/
+  padding-top: 50px;
+}
+h3{
+  font-size: 18px;
+}
+#card{
+  color: blue;
+}
+#card-body{
+  background-color: white;
+}#card-body, h3 p{
+  color:black;
+  padding: 20px;
+}
+#konten{
+  background-color: #B22222;
+  padding-top: 1.5rem;
+}
+#konten, h3 p{
+  color: white;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+p .btn, .btn:hover{
+  color: white;
+}
+#search{
+  color: white;
+}
+#img-fluid{
+  width: 60%;
+}
+#dash{
+  text-align: center;
+}
+#img-award{
+  width: 30%;
+}
+input[type=text] {
+  width: 100%;
+  padding: 5px 10px;
+  /*margin: 8px 0;*/
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+.form{
+  text-align: center;
+}
+h3.matkul{
+  color: #45B219;
+}
+h3.setujuKRS{
+  color: #46CE0F;
+}
+h3.tolakKRS{
+  color: red;
+}
